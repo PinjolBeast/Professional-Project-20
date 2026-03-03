@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our beautiful gallery of bouquet arrangements, wedding flowers, and special occasion designs.">
+  <meta name="keywords" content="flower gallery, bouquet photos, wedding flowers, floral arrangements">
+  
+  <title>Gallery | Bloom & Blush</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-content">
+      <div class="loader-flower">🌸</div>
+      <p>Loading...</p>
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌸</div>
+        <span>Bloom & Blush</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="occasions.html">Occasions</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-auth">
+        <div class="user-info" style="display: none;">
+          <div class="user-avatar">U</div>
+          <span class="user-name">User</span>
+        </div>
+        <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+      </div>
+      
+      <div class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <span class="btn-close">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="occasions.html">Occasions</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+  
+  <!-- Page Header -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-content">
+        <p class="hero-subtitle" data-aos="fade-up">Our Work</p>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">Gallery</h1>
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="200">Explore our collection of beautiful arrangements crafted with love and artistry.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Gallery Section -->
+  <section class="section gallery-section">
+    <div class="container">
+      <!-- Filter Buttons -->
+      <div class="text-center" style="margin-bottom: 50px;">
+        <div style="display: inline-flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+          <button class="btn btn-primary filter-btn active" data-filter="all">All</button>
+          <button class="btn btn-secondary filter-btn" data-filter="wedding">Wedding</button>
+          <button class="btn btn-secondary filter-btn" data-filter="birthday">Birthday</button>
+          <button class="btn btn-secondary filter-btn" data-filter="anniversary">Anniversary</button>
+          <button class="btn btn-secondary filter-btn" data-filter="graduation">Graduation</button>
+        </div>
+      </div>
+      
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?w=600&q=80" alt="Wedding bouquet">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=400&q=80" alt="Bridal bouquet">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="birthday">
+          <img src="https://images.unsplash.com/photo-1550955295-a831e549110d?w=400&q=80" alt="Birthday bouquet">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="anniversary">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="Anniversary flowers">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="graduation">
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&q=80" alt="Graduation bouquet">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1462275646964-a0e3571f4f83?w=400&q=80" alt="Wedding centerpiece">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="birthday">
+          <img src="https://images.unsplash.com/photo-1582794543139-8ac92a900de0?w=400&q=80" alt="Colorful bouquet">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="anniversary">
+          <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=400&q=80" alt="Romantic roses">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="graduation">
+          <img src="https://images.unsplash.com/photo-1494412651409-ae1c21316059?w=400&q=80" alt="Graduation flowers">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80" alt="Wedding decoration">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="birthday">
+          <img src="https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?w=400&q=80" alt="Spring bouquet">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in" data-category="anniversary">
+          <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=400&q=80" alt="Elegant arrangement">
+          <div class="gallery-overlay">
+            <i class="fas fa-search-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></span>
+    <span class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></span>
+    <div class="lightbox-content">
+      <img src="" alt="">
+    </div>
+  </div>
+  
+  <!-- CTA Section -->
+  <section class="section" style="background: linear-gradient(135deg, var(--soft-pink), var(--lavender));">
+    <div class="container">
+      <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+        <h2>Love What You See?</h2>
+        <p style="margin: 20px 0;">Let us create something beautiful for your special occasion. Login to place your order.</p>
+        <div style="display: flex; gap: 20px; justify-content: center;">
+          <a href="login.html" class="btn btn-primary btn-lg">Login to Order</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">🌸</div>
+            <span>Bloom & Blush</span>
+          </a>
+          <p>Creating beautiful memories through the art of floristry. Every bouquet tells a story of love, joy, and celebration.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="occasions.html">Occasions</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="footer-links">
+          <h5>Services</h5>
+          <a href="occasions.html">Wedding Bouquets</a>
+          <a href="occasions.html">Event Decorations</a>
+          <a href="occasions.html">Corporate Gifts</a>
+          <a href="occasions.html">Custom Arrangements</a>
+          <a href="occasions.html">Delivery Service</a>
+        </div>
+        
+        <div class="footer-links">
+          <h5>Contact</h5>
+          <a href="tel:+1234567890"><i class="fas fa-phone"></i> (123) 456-7890</a>
+          <a href="mailto:hello@bloomandblush.com"><i class="fas fa-envelope"></i> hello@bloomandblush.com</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i> 123 Flower Street<br>Garden City, FL 12345</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Bloom & Blush. All rights reserved. Made with 💕 for flower lovers.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+    
+    // Gallery Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active', 'btn-primary'));
+        filterBtns.forEach(b => b.classList.add('btn-secondary'));
+        this.classList.add('active', 'btn-primary');
+        this.classList.remove('btn-secondary');
+        
+        // Filter items
+        galleryItems.forEach(item => {
+          const category = item.dataset.category;
+          
+          if (filter === 'all' || category === filter) {
+            item.style.display = 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+

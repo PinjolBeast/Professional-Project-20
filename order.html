@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Place your custom bouquet order - weddings, graduations, anniversaries, and more.">
+  <meta name="keywords" content="order bouquet, custom flowers, flower order, wedding flowers">
+  
+  <title>Order Form | Bloom & Blush</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-content">
+      <div class="loader-flower">🌸</div>
+      <p>Loading...</p>
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌸</div>
+        <span>Bloom & Blush</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="occasions.html">Occasions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-auth">
+        <div class="user-info">
+          <div class="user-avatar">U</div>
+          <span class="user-name">User</span>
+        </div>
+        <button id="logoutBtn" class="btn btn-secondary btn-sm">Logout</button>
+      </div>
+      
+      <div class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <span class="btn-close">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="occasions.html">Occasions</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <button id="logoutBtnMobile" class="btn btn-primary">Logout</button>
+  </div>
+  
+  <!-- Order Page -->
+  <section class="order-page">
+    <div class="container">
+      <div class="order-header">
+        <p class="section-subtitle">Custom Orders</p>
+        <h2>Place Your Order</h2>
+        <p>Fill out the form below and we'll create the perfect bouquet for your special occasion.</p>
+      </div>
+      
+      <div class="order-form-container">
+        <form id="orderForm" class="order-form">
+          <!-- Personal Information -->
+          <h4 style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--light-gray);">
+            <i class="fas fa-user"></i> Personal Information
+          </h4>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderName">Full Name *</label>
+              <input type="text" id="orderName" name="name" class="form-control" placeholder="Enter your full name" required minlength="2">
+            </div>
+            
+            <div class="form-group">
+              <label for="orderEmail">Email Address *</label>
+              <input type="email" id="orderEmail" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderPhone">Phone Number *</label>
+              <input type="tel" id="orderPhone" name="phone" class="form-control" placeholder="(123) 456-7890" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="orderDate">Preferred Delivery Date *</label>
+              <input type="date" id="orderDate" name="delivery_date" class="form-control" required>
+            </div>
+          </div>
+          
+          <!-- Order Details -->
+          <h4 style="margin: 30px 0 25px; padding-bottom: 15px; border-bottom: 1px solid var(--light-gray);">
+            <i class="fas fa-shopping-bag"></i> Order Details
+          </h4>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bouquetType">Bouquet Type *</label>
+              <select id="bouquetType" name="bouquet_type" class="form-control" required>
+                <option value="">Select bouquet type</option>
+                <option value="Classic Rose Bouquet">Classic Rose Bouquet</option>
+                <option value="Mixed Flower Arrangement">Mixed Flower Arrangement</option>
+                <option value="Seasonal Bouquet">Seasonal Bouquet</option>
+                <option value="Luxury Designer Bouquet">Luxury Designer Bouquet</option>
+                <option value="Wildflower Arrangement">Wildflower Arrangement</option>
+                <option value="Orchid Arrangement">Orchid Arrangement</option>
+                <option value="Tulip Bouquet">Tulip Bouquet</option>
+                <option value="Sunflower Bouquet">Sunflower Bouquet</option>
+                <option value="Peony Bouquet">Peony Bouquet</option>
+                <option value="Custom Design">Custom Design (Describe below)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="occasionType">Occasion *</label>
+              <select id="occasionType" name="occasion" class="form-control" required>
+                <option value="">Select occasion</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Graduation">Graduation</option>
+                <option value="Congratulations">Congratulations</option>
+                <option value="Thank You">Thank You</option>
+                <option value="Sympathy">Sympathy</option>
+                <option value="Valentine's Day">Valentine's Day</option>
+                <option value="Mother's Day">Mother's Day</option>
+                <option value="Just Because">Just Because</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Message -->
+          <div class="form-group full-width">
+            <label for="orderMessage">Custom Message & Special Requests</label>
+            <textarea id="orderMessage" name="message" class="form-control" placeholder="Tell us about your vision, color preferences, budget, or any special requests..." rows="5"></textarea>
+          </div>
+          
+          <!-- Delivery Address -->
+          <h4 style="margin: 30px 0 25px; padding-bottom: 15px; border-bottom: 1px solid var(--light-gray);">
+            <i class="fas fa-shipping-fast"></i> Delivery Information
+          </h4>
+          
+          <div class="form-group full-width">
+            <label for="deliveryAddress">Delivery Address *</label>
+            <textarea id="deliveryAddress" name="delivery_address" class="form-control" placeholder="Enter complete delivery address including street name, apartment/suite number, city, state, and ZIP code..." rows="3" required></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="deliveryTime">Preferred Delivery Time</label>
+              <select id="deliveryTime" name="delivery_time" class="form-control">
+                <option value="">Any time</option>
+                <option value="Morning (9AM - 12PM)">Morning (9AM - 12PM)</option>
+                <option value="Afternoon (12PM - 4PM)">Afternoon (12PM - 4PM)</option>
+                <option value="Evening (4PM - 7PM)">Evening (4PM - 7PM)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget" class="form-control">
+                <option value="">Select budget</option>
+                <option value="$30 - $50">$30 - $50</option>
+                <option value="$50 - $75">$50 - $75</option>
+                <option value="$75 - $100">$75 - $100</option>
+                <option value="$100 - $150">$100 - $150</option>
+                <option value="$150+">$150+</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Additional Options -->
+          <div style="margin: 30px 0;">
+            <h4 style="margin-bottom: 20px;">Additional Options</h4>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+              <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 15px; background: var(--light-gray); border-radius: var(--radius-sm);">
+                <input type="checkbox" name="add_ons" value="gift_wrapping" style="width: auto;">
+                <span>Gift Wrapping (+$5)</span>
+              </label>
+              
+              <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 15px; background: var(--light-gray); border-radius: var(--radius-sm);">
+                <input type="checkbox" name="add_ons" value="card" style="width: auto;">
+                <span>Personalized Card (+$3)</span>
+              </label>
+              
+              <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 15px; background: var(--light-gray); border-radius: var(--radius-sm);">
+                <input type="checkbox" name="add_ons" value="balloons" style="width: auto;">
+                <span>Add Balloons (+$10)</span>
+              </label>
+              
+              <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 15px; background: var(--light-gray); border-radius: var(--radius-sm);">
+                <input type="checkbox" name="add_ons" value="vase" style="width: auto;">
+                <span>Include Vase (+$15)</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Terms -->
+          <div style="margin: 25px 0;">
+            <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer;">
+              <input type="checkbox" name="terms" required style="width: auto; margin-top: 3px;">
+              <span style="font-size: 0.9rem; color: var(--text-gray);">I agree to the <a href="#" style="color: var(--deep-pink);">Terms of Service</a> and <a href="#" style="color: var(--deep-pink);">Privacy Policy</a>. I understand that orders require 24-hour advance notice and a 50% deposit for custom arrangements.</span>
+            </label>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fas fa-paper-plane"></i> Submit Order
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">🌸</div>
+            <span>Bloom & Blush</span>
+          </a>
+          <p>Creating beautiful memories through the art of floristry.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="occasions.html">Occasions</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="footer-links">
+          <h5>Services</h5>
+          <a href="occasions.html">Wedding</a>
+          <a href="occasions.html">Events</a>
+          <a href="occasions.html">Custom</a>
+          <a href="occasions.html">Delivery</a>
+        </div>
+        
+        <div class="footer-links">
+          <h5>Contact</h5>
+          <a href="tel:+1234567890">(123) 456-7890</a>
+          <a href="mailto:hello@bloomandblush.com">hello@bloomandblush.com</a>
+          <a href="#">123 Flower Street</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Bloom & Blush. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/order.js"></script>
+  
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
+</body>
+</html>
+

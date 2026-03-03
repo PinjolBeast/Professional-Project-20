@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login or register to access exclusive bouquet ordering and custom arrangements.">
+  <meta name="keywords" content="login, register, account, order flowers">
+  
+  <title>Login | Bloom & Blush</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" style="background: linear-gradient(135deg, var(--soft-pink), var(--lavender));">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌸</div>
+        <span>Bloom & Blush</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="occasions.html">Occasions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-auth">
+        <div class="user-info" style="display: none;">
+          <div class="user-avatar">U</div>
+          <span class="user-name">User</span>
+        </div>
+        <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+      </div>
+      
+      <div class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <span class="btn-close">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="occasions.html">Occasions</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+  
+  <!-- Auth Page -->
+  <section class="auth-page">
+    <div class="auth-container">
+      <div class="auth-header">
+        <h2>Welcome to Bloom & Blush</h2>
+        <p>Login or create an account to order beautiful bouquets</p>
+      </div>
+      
+      <div class="auth-body">
+        <!-- Auth Tabs -->
+        <div class="auth-tabs">
+          <button class="active" data-tab="login">Login</button>
+          <button data-tab="register">Register</button>
+        </div>
+        
+        <!-- Error Message -->
+        <div class="auth-error"></div>
+        
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form active">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="loginEmail" class="form-control" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <i class="fas fa-lock"></i>
+            <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" required>
+            <span class="password-toggle" onclick="togglePassword('loginPassword')">
+              <i class="fas fa-eye"></i>
+            </span>
+          </div>
+          
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="checkbox" style="width: auto;"> Remember me
+            </label>
+            <a href="#" style="color: var(--deep-pink); font-size: 0.9rem;">Forgot password?</a>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+        </form>
+        
+        <!-- Register Form -->
+        <form id="registerForm" class="auth-form">
+          <div class="form-group">
+            <label for="registerName">Full Name</label>
+            <i class="fas fa-user"></i>
+            <input type="text" id="registerName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="registerEmail">Email Address</label>
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="registerEmail" class="form-control" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <i class="fas fa-lock"></i>
+            <input type="password" id="registerPassword" class="form-control" placeholder="Create a password" required minlength="6">
+            <span class="password-toggle" onclick="togglePassword('registerPassword')">
+              <i class="fas fa-eye"></i>
+            </span>
+          </div>
+          
+          <div class="form-group">
+            <label for="registerConfirmPassword">Confirm Password</label>
+            <i class="fas fa-lock"></i>
+            <input type="password" id="registerConfirmPassword" class="form-control" placeholder="Confirm your password" required>
+            <span class="password-toggle" onclick="togglePassword('registerConfirmPassword')">
+              <i class="fas fa-eye"></i>
+            </span>
+          </div>
+          
+          <p style="font-size: 0.85rem; color: var(--text-gray); margin-bottom: 20px;">
+            By registering, you agree to our <a href="#" style="color: var(--deep-pink);">Terms of Service</a> and <a href="#" style="color: var(--deep-pink);">Privacy Policy</a>.
+          </p>
+          
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fas fa-user-plus"></i> Create Account
+          </button>
+        </form>
+        
+        <div class="auth-divider">
+          <span>or continue with</span>
+        </div>
+        
+        <div class="social-auth">
+          <button type="button" class="google-login-btn" onclick="handleGoogleLogin()">
+            <i class="fab fa-google"></i> Google
+          </button>
+          <button type="button" onclick="demoLogin()">
+            <i class="fas fa-play"></i> Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  
+  <script>
+    // Password Toggle
+    function togglePassword(inputId) {
+      const input = document.getElementById(inputId);
+      const icon = input.nextElementSibling.nextElementSibling.querySelector('i');
+      
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+    
+    // Demo Login Function
+    function demoLogin() {
+      const demoUser = {
+        uid: 'demo_user_' + Date.now(),
+        email: 'demo@bloomandblush.com',
+        displayName: 'Demo User',
+        name: 'Demo User'
+      };
+      
+      localStorage.setItem('bloomblush_user', JSON.stringify(demoUser));
+      localStorage.setItem('bloomblush_token', 'demo_token_' + Date.now());
+      
+      showToast('Welcome to Demo Mode!', 'success');
+      
+      // Redirect after login
+      setTimeout(() => {
+        const redirectUrl = sessionStorage.getItem('redirectAfterLogin');
+        if (redirectUrl) {
+          sessionStorage.removeItem('redirectAfterLogin');
+          window.location.href = redirectUrl;
+        } else {
+          window.location.href = 'index.html';
+        }
+      }, 1000);
+    }
+  </script>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Bloom & Blush. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
